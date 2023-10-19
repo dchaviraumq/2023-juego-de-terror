@@ -132,6 +132,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lights:
   - {fileID: 3943679435517836929}
+  lightBulbs:
+  - {fileID: 2835318539049825690}
+  onMaterial: {fileID: 2100000, guid: dfcf342b5f1fd8846b0dd8d24b6b0179, type: 2}
+  offMaterial: {fileID: 2100000, guid: ec76903d563b95d4fa22529ec015ea84, type: 2}
   isOn: 1
   interactionText: 
 --- !u!65 &1885111510339494952
@@ -328,6 +332,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91795a95dcd24bc4896997f61fa2ecf3, type: 3}
+--- !u!23 &2835318539049825690 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4835456424629741827, guid: 91795a95dcd24bc4896997f61fa2ecf3, type: 3}
+  m_PrefabInstance: {fileID: 7224880803779140761}
+  m_PrefabAsset: {fileID: 0}
 --- !u!108 &3943679435517836929 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 5978859744147202584, guid: 91795a95dcd24bc4896997f61fa2ecf3, type: 3}
