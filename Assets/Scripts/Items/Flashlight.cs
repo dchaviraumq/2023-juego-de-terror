@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using Character;
+using Contracts;
+using UnityEngine;
 
 namespace Items
 {
-    public class Flashlight : MonoBehaviour
+    public class Flashlight : MonoBehaviour, IInteractable, IPickup
     {
         [SerializeField] private KeyCode flashlightKey = KeyCode.F;
 
@@ -14,13 +16,17 @@ namespace Items
         [SerializeField] private Material onMaterial;
         [SerializeField] private Material offMaterial;
 
+        [SerializeField] private string interactionText;
+
+        public string InteractionText => interactionText;
+
         private void Awake() {
             ToggleFlashlight();
         }
 
         private void Update() {
             if (!Input.GetKeyDown(flashlightKey)) return;
-            
+
             isOn = !isOn;
             ToggleFlashlight();
         }
@@ -29,6 +35,14 @@ namespace Items
             lightBulb.enabled = isOn;
             var mat = isOn ? onMaterial : offMaterial;
             glass.material = mat;
+        }
+
+        public void Interact() {
+            gameObject.SetActive(false);
+        }
+
+        public void Pickup(PlayerItemManager itemManager) {
+            itemManager.EnableFlashlight();
         }
     }
 }
