@@ -1,4 +1,4 @@
-﻿namespace Environment
+﻿namespace Contracts
 {
     public interface IInteractable
     {
