@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Items
 {
-    public class Flashlight : MonoBehaviour, IInteractable, IPickup
+    public class Flashlight : MonoBehaviour
     {
         [SerializeField] private KeyCode flashlightKey = KeyCode.F;
 
@@ -15,10 +15,6 @@ namespace Items
 
         [SerializeField] private Material onMaterial;
         [SerializeField] private Material offMaterial;
-
-        [SerializeField] private string interactionText;
-
-        public string InteractionText => interactionText;
 
         private void Awake() {
             ToggleFlashlight();
@@ -35,14 +31,6 @@ namespace Items
             lightBulb.enabled = isOn;
             var mat = isOn ? onMaterial : offMaterial;
             glass.material = mat;
-        }
-
-        public void Interact() {
-            gameObject.SetActive(false);
-        }
-
-        public void Pickup(PlayerItemManager itemManager) {
-            itemManager.EnableFlashlight();
         }
     }
 }
