@@ -391,11 +391,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2232825674380508400, guid: bf9365478d162c941bf6f1ff818c4e69, type: 3}
   m_PrefabInstance: {fileID: 101200395}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &140429520 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 839985355688403655, guid: 210e51703bbc6b340a13816af6188158, type: 3}
-  m_PrefabInstance: {fileID: 4925338793055791862}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &143160515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3997,7 +3992,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 420665533}
-  - {fileID: 140429520}
   m_Father: {fileID: 203720411}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1496193387
@@ -5321,11 +5315,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1478844146}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 839985355688403655, guid: 210e51703bbc6b340a13816af6188158, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 839985355688403655, guid: 210e51703bbc6b340a13816af6188158, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5366,14 +5360,6 @@ PrefabInstance:
     - target: {fileID: 1558661152252957115, guid: 210e51703bbc6b340a13816af6188158, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4777995312229747788, guid: 210e51703bbc6b340a13816af6188158, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5115199077054684513, guid: 210e51703bbc6b340a13816af6188158, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5428,6 +5414,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4823829326187701418, guid: f79de5f51a2ac6c44b5a4d702c66f262, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000008702278
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823829326187701418, guid: f79de5f51a2ac6c44b5a4d702c66f262, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5608535323876560841, guid: f79de5f51a2ac6c44b5a4d702c66f262, type: 3}
       propertyPath: m_Name
       value: Light Switch
@@ -5445,3 +5439,4 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1778131798}
   - {fileID: 1028330738}
+  - {fileID: 4925338793055791862}
