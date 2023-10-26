@@ -24,6 +24,7 @@ namespace Jugador
             if (_interactuable == null) return;
 
             _interactuable.Interactuar();
+            panelDeInteraccion.Desactivar();
         }
 
         private void OnTriggerStay(Collider other) {
