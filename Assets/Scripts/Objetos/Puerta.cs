@@ -6,9 +6,17 @@ namespace Objetos
 {
     public class Puerta : MonoBehaviour, I_Interactuable
     {
-        public string TextoDeInteraccion => abierta ? "Cerrar" : "Abrir";
+        public string TextoDeInteraccion
+        {
+            get
+            {
+                if (locked) return "Esta puerta necesita una llave para abrirse.";
+                return abierta ? "Cerrar" : "Abrir";
+            }
+        }
 
         [SerializeField] private bool abierta;
+        [SerializeField] private bool locked;
 
         private Animator _animator;
 
@@ -17,9 +25,16 @@ namespace Objetos
 
         private void Start() {
             _animator = GetComponent<Animator>();
+
+            if (!locked) return;
+            abierta = false;
+            _animator.ResetTrigger(AbrirTrigger);
+            _animator.SetTrigger(CerrarTrigger);
         }
 
         public void Interactuar() {
+            if (locked) return;
+            
             abierta = !abierta;
             if (abierta)
             {
@@ -31,6 +46,10 @@ namespace Objetos
                 _animator.ResetTrigger(AbrirTrigger);
                 _animator.SetTrigger(CerrarTrigger);
             }
+        }
+
+        public void Unlock() {
+            locked = false;
         }
     }
 }
