@@ -6,6 +6,8 @@ namespace Scripts.Objetos
 {
     public class ControlLuces : MonoBehaviour, I_Interactuable
     {
+        public string TextoDeInteraccion => encendido ? "Encender" : "Apagar";
+
         [SerializeField] private Light[]        luces;
         [SerializeField] private MeshRenderer[] focos;
 
