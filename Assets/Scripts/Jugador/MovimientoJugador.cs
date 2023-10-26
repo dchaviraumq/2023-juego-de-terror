@@ -36,11 +36,11 @@ namespace Jugador
 
             var vectorLocal = new Vector3(x, 0, z);
             vectorLocal =  transform.TransformDirection(vectorLocal);
-            vectorLocal *= Time.deltaTime;
+            // vectorLocal *= Time.deltaTime;
 
             _movimiento = new Vector3(vectorLocal.x, y, vectorLocal.z);
 
-            _controller.Move(_movimiento);
+            _controller.Move(_movimiento * Time.deltaTime);
         }
     }
 }
