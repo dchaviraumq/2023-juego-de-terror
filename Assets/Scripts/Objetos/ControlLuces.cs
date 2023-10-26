@@ -14,6 +14,8 @@ namespace Scripts.Objetos
 
         [SerializeField] private bool encendido;
 
+        public string TextoDeInteraccion => encendido ? "Apagar" : "Encender";
+
         private void Awake() {
             AlternarEncendido();
         }
