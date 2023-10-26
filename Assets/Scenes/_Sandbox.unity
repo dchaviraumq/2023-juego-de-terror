@@ -5633,14 +5633,6 @@ PrefabInstance:
       propertyPath: encendido
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8684642970390917185, guid: f79de5f51a2ac6c44b5a4d702c66f262, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8984946937027543414, guid: f79de5f51a2ac6c44b5a4d702c66f262, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 586a94bdcfccfab4fb09a3cacb51f1e2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
