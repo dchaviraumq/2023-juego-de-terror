@@ -23,6 +23,8 @@ namespace Jugador
         private void OnTriggerStay(Collider other) {
             _interactuable = other.gameObject.GetComponent<I_Interactuable>();
             
+            if (_interactuable == null) return;
+            
             var texto = "[" + accion + "] " + _interactuable.TextoDeInteraccion;
             panelDeInteraccionUI.Mostrar(texto);
         }
