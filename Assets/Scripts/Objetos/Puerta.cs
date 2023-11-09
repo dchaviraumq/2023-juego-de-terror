@@ -1,37 +1,60 @@
 ﻿using System;
 using Scripts.Contratos;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Objetos
 {
     public class Puerta : MonoBehaviour, I_Interactuable
     {
-        public string TextoDeInteraccion => abierta ? "Cerrar" : "Abrir";
+        public string TextoDeInteraccion => Mensaje();
 
-        [SerializeField] private bool abierta;
+        [SerializeField] private bool     conLlave;
+        [SerializeField] private Animator animator;
 
-        [SerializeField] private Animator _animator;
+        private bool _abierta;
 
         public void Interactuar() {
-            abierta = !abierta;
-            if (abierta)
+            if (conLlave) return;
+
+            _abierta = !_abierta;
+            if (_abierta)
             {
                 Abrir();
             }
             else
             {
-                Cerrar();   
+                Cerrar();
+            }
+        }
+
+        public void QuitarLlave() {
+            conLlave = false;
+        }
+
+        private string Mensaje() {
+            if (conLlave)
+            {
+                return "Se necesita una llave";
+            }
+            else if (_abierta)
+            {
+                return "Cerrar";
+            }
+            else
+            {
+                return "Abrir";
             }
         }
 
         private void Abrir() {
-            _animator.ResetTrigger("Close");
-            _animator.SetTrigger("Open");
+            animator.ResetTrigger("Close");
+            animator.SetTrigger("Open");
         }
 
         private void Cerrar() {
-            _animator.ResetTrigger("Open");
-            _animator.SetTrigger("Close");
+            animator.ResetTrigger("Open");
+            animator.SetTrigger("Close");
         }
     }
 }
