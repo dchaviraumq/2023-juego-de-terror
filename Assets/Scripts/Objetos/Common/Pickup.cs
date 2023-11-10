@@ -6,8 +6,9 @@ namespace Objetos.Common
 {
     public class Pickup : MonoBehaviour, I_Interactuable
     {
-        public string TextoDeInteraccion => "Pickup";
+        public string TextoDeInteraccion => texto;
 
+        [SerializeField] private string     texto;
         [SerializeField] private UnityEvent eventos;
 
         public void Interactuar() {

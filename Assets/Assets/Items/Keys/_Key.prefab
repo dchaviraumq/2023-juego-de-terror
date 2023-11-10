@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ade71fd6f264b0b85cee6f8de88c2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  texto: Recoger Llave
   eventos:
     m_PersistentCalls:
       m_Calls:
